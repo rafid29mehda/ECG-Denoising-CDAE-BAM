@@ -19,7 +19,7 @@ The project follows an end-to-end pipeline for ECG denoising:
    - **Convolutional Denoising Autoencoder (CDAE)**: Uses convolutional layers for encoding and decoding to capture spatial patterns in ECG signals.
    - **Batch Attention Mechanism (BAM)**: Applies global average pooling and dense layers to compute attention weights, enhancing the model's focus on relevant features.
    - The model is trained to reconstruct clean ECG signals from noisy inputs using Mean Squared Error (MSE) loss.
-5. **Training**: Train the model on segmented ECG windows with Adam optimizer for 20 epochs.
+5. **Training**: Train the model on segmented ECG windows with Adam optimizer for 50 epochs.
 6. **Evaluation**: Assess denoising performance using Signal-to-Noise Ratio (SNR) and visualize clean, noisy, and denoised signals.
 7. **Visualization**: Plot original, noisy, and denoised ECG signals to demonstrate model effectiveness.
 
@@ -33,8 +33,39 @@ Install dependencies using:
 pip install numpy pandas wfdb tensorflow scikit-learn matplotlib
 ```
 
+## Usage
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/ECG-Denoising-CDAE-BAM.git
+   cd ECG-Denoising-CDAE-BAM
+   ```
+
+2. **Run in Google Colab**:
+   - Open Google Colab and upload the `ecg_denoising_cdae_bam.py` script.
+   - Install dependencies in a Colab cell:
+     ```python
+     !pip install wfdb tensorflow
+     ```
+   - Run the script to download data, train the model, and visualize results.
+
+3. **Local Execution**:
+   - Ensure dependencies are installed.
+   - Run the script:
+     ```bash
+     python ecg_denoising_cdae_bam.py
+     ```
+
+## Results
+- **Quantitative Evaluation**: The model significantly improves SNR:
+  - SNR (Noisy vs Clean): 6.44 dB
+  - SNR (Denoised vs Clean): 10.84 dB
+  - This represents a ~4.4 dB improvement, demonstrating effective noise removal.
+- **Qualitative Evaluation**: Visualizations show effective removal of noise while preserving ECG morphology (e.g., QRS complexes).
+
 ### Sample Visualization
-![image](https://github.com/user-attachments/assets/521ff20e-66a1-4abd-8062-78fa35b36739)
+![image](https://github.com/user-attachments/assets/14b9bf94-48b1-4420-8861-d49b23a13f5d)
 
 *Figure: Comparison of clean, noisy, and denoised ECG signals.*
+
+
 
