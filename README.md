@@ -33,28 +33,6 @@ Install dependencies using:
 pip install numpy pandas wfdb tensorflow scikit-learn matplotlib
 ```
 
-## Usage
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/ECG-Denoising-CDAE-BAM.git
-   cd ECG-Denoising-CDAE-BAM
-   ```
-
-2. **Run in Google Colab**:
-   - Open Google Colab and upload the `ecg_denoising_cdae_bam.py` script.
-   - Install dependencies in a Colab cell:
-     ```python
-     !pip install wfdb tensorflow
-     ```
-   - Run the script to download data, train the model, and visualize results.
-
-3. **Local Execution**:
-   - Ensure dependencies are installed.
-   - Run the script:
-     ```bash
-     python ecg_denoising_cdae_bam.py
-     ```
-
 ## Results
 - **Quantitative Evaluation**: The model significantly improves SNR:
   - SNR (Noisy vs Clean): 6.44 dB
