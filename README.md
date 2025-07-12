@@ -1,6 +1,6 @@
 # ECG Denoising with Convolutional Denoising Autoencoder and Batch Attention Mechanism (CDAE-BAM)
 
-## Project Overview
+## Overview
 This project implements a **Convolutional Denoising Autoencoder with Batch Attention Mechanism (CDAE-BAM)** to remove common noise types (EMG, baseline wander, and powerline interference) from ECG signals using the **MIT-BIH Arrhythmia Database**. The goal is to enhance ECG signal quality for downstream clinical applications, such as arrhythmia detection, by leveraging advanced deep learning techniques. This work demonstrates expertise in Biomedical Signal Processing and deep learning, aligning with cutting-edge research in ECG analysis.
 
 ## Motivation
